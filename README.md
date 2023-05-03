@@ -1,4 +1,4 @@
-### <p align="center"> AdaptiveClick: Clicks-aware Transformer with Adaptive Focal Loss for Interactive Image Segmentation
+### <p align="center"> BRPPNet: Balanced Privacy Protection Network for Referring Personal Image Privacy Protection
 <br>
 <div align="center">
   Jiacheng&nbsp;Lin</a> <b>&middot;</b>
