@@ -35,7 +35,6 @@ work “Balanced Referring Personal PrivacyNet” (BRPPNet), which introduces a 
 loss” to effectively localize the referring person. Technically, MFFM adopts a lightweight CNN backbone to filter noise information as well as complement
 visual features for high-quality mask generation. What is more, we have theoretically proven the insufficiency of binary cross-entropy (BCE) loss and its
 variants for RP-IPP, which suffers from the serious imbalance problem during gradient propagation, and thus formulate “Balanced-BCE loss” to alleviate the
-gradient propagation bias caused by unequal positive and negative pixels. To verify the effectiveness of BRPPNet, we manually construct a dataset “Refer-
-ring Personal COCO” (RPCOCO). The experimental results demonstrate that BRPPNet outperforms the advanced approaches for RP-IPP, and the proposed
+gradient propagation bias caused by unequal positive and negative pixels. To verify the effectiveness of BRPPNet, we manually construct a dataset “Referring Personal COCO” (RPCOCO). The experimental results demonstrate that BRPPNet outperforms the advanced approaches for RP-IPP, and the proposed
 “Balanced-BCE loss” embedded into several existing approaches consistently
 boosts performance, yielding remarkable improvements on all the metrics.
