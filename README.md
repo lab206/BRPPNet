@@ -69,7 +69,7 @@ def Balanced_BCE_loss(scores, labels, eplison1=1.0, eplison2=-0.4, average=True)
 The code of BBCE Loss of Tensorflow like as follows:
 ~~~
 
-def balanced_binary_cross_entropy(pred, mask, batch, epsilon1=1.0, epsilon2 = -0.4, average=False):
+def Balanced_binary_cross_entropy(pred, mask, batch, epsilon1=1.0, epsilon2 = -0.4, average=False):
     
     # Apply different weights to loss of positive samples and negative samples
     # Positive samples have the gradient weight of 1.0, while negative samples have the gradient weight of -0.4
