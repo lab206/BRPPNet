@@ -39,9 +39,11 @@ gradient propagation bias caused by unequal positive and negative pixels. To ver
 “Balanced-BCE loss” embedded into several existing approaches consistently
 boosts performance, yielding remarkable improvements on all the metrics.
 
+### BBCE Loss
 
 The code of BBCE loss of Pytorch like as follows:
 
+~~~
 def Balanced_BCE_loss(scores, labels, eplison1=1.0, eplison2=-0.4, average=True):
     # Apply different weights to loss of positive samples and negative samples
     # Positive samples have the gradient weight of 1.0, while negative samples have the gradient weight of -0.4  
@@ -62,3 +64,4 @@ def Balanced_BCE_loss(scores, labels, eplison1=1.0, eplison2=-0.4, average=True)
       bbce = torch.sum(cls_loss + (neg_t + pos_t))
       
     return bbce
+~~~
