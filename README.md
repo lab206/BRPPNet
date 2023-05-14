@@ -38,3 +38,28 @@ variants for RP-IPP, which suffers from the serious imbalance problem during gra
 gradient propagation bias caused by unequal positive and negative pixels. To verify the effectiveness of BRPPNet, we manually construct a dataset “Referring Personal COCO” (RPCOCO). The experimental results demonstrate that BRPPNet outperforms the advanced approaches for RP-IPP, and the proposed
 “Balanced-BCE loss” embedded into several existing approaches consistently
 boosts performance, yielding remarkable improvements on all the metrics.
+
+
+The code of BBCE loss of Pytorch like as follows:
+
+def Balanced_BCE_loss(scores, labels, eplison1=1.0, eplison2=-0.4, average=True):
+
+    # Apply different weights to loss of positive samples and negative samples
+    # Positive samples have the gradient weight of 1.0, while negative samples have the gradient weight of -0.4  
+    
+    # Classification loss as the average or the sum of balanced per-score loss
+    cls_loss = F.binary_cross_entropy_with_logits(scores,labels)
+
+    p = torch.sigmoid(scores) 
+    pos_t = eplison1 * (1 - labels * p)
+    neg_t = eplison2 * (1 - labels) * (1 - p)
+    
+    if average is True:
+    
+      bbce = torch.mean(cls_loss + (neg_t + pos_t))
+      
+    else:
+    
+      bbce = torch.sum(cls_loss + (neg_t + pos_t))
+      
+    return bbce
