@@ -39,7 +39,7 @@ gradient propagation bias caused by unequal positive and negative pixels. To ver
 “Balanced-BCE loss” embedded into several existing approaches consistently
 boosts performance, yielding remarkable improvements on all the metrics.
 
-### BBCE Loss
+### Balanced Binary Cross Entropy Loss
 
 The code of BBCE loss of Pytorch like as follows:
 
