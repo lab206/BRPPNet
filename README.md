@@ -90,3 +90,7 @@ def Balanced_binary_cross_entropy(pred, mask, batch, epsilon1=1.0, epsilon2 = -0
     bbce_loss = BBCE / batch
     
     return bbce_loss
+   ~~~
+
+## Acknowledgement
+Our project is developed based on [MCN](https://github.com/luogen1996/MCN), [VLT](https://github.com/henghuiding/Vision-Language-Transformer). Thanks for their excellence works.
