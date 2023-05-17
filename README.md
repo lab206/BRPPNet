@@ -39,6 +39,41 @@ gradient propagation bias caused by unequal positive and negative pixels. To ver
 “Balanced-BCE loss” embedded into several existing approaches consistently
 boosts performance, yielding remarkable improvements on all the metrics.
 
+
+## Installation
+
+1. Environment:
+
+   - Python 3.7
+   - tensorflow 1.15
+
+2. Dataset preparation
+
+   - Put the folder of COCO training set ("`train2014`") under `data/images/`.
+
+   - Running the script for data preparation under `data/`:
+   
+      ```
+      cd data
+      python data_process_v2.py --data_root . --output_dir data_v2 --dataset [rpcocos/rpcocom/rpcocol] --split [unc/umd/google] --generate_mask
+      ```
+## Training and Evaluating
+
+1. Pretrained Backbones:
+   We use the backbone weights proviede by [VLT](https://github.com/henghuiding/Vision-Language-Transformer).
+
+2. Specify hyperparameters, dataset path and pretrained weight path in the configuration file. Please refer to the examples under `/config`, or config file of our pretrained models.
+
+3. Training 
+   ```
+   python main.py train [PATH_TO_CONFIG_FILE]
+   ```
+   
+ 4. Evaluating
+   ```
+   python main.py test [PATH_TO_CONFIG_FILE]
+   ```
+
 ### Balanced Binary Cross Entropy Loss
 
 The code of BBCE Loss of Tensorflow like as follows:
