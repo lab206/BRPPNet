@@ -1,0 +1,19 @@
+train_set: ./data/data_v2/anns/rpcocom/train.json
+evaluate_set: ./data/data_v2/anns/rpcocom/testA.json
+seg_gt_path: ./data/data_v2/masks/rpcocom
+log_path: ./log/refcocop
+evaluate_model: ./log/rpcocom_example/models/best_map.h5
+
+evaluate_name: selective_twice_val
+save_path: /data2/dxw/refcoco+_yolo_testA
+
+transformer_encoder_num: 2
+transformer_decoder_num: 2
+
+batch_size: 24
+workers: 32
+
+num_query: 16
+query_balance: True
+
+steps: 10

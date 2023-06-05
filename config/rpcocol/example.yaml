@@ -1,0 +1,17 @@
+train_set: ./data/data_v2/anns/rpcocol/train.json
+evaluate_set: ./data/data_v2/anns/rpcocol/test.json
+seg_gt_path: ./data/data_v2/masks/rpcocol
+log_path: ./log/refcocog
+evaluate_model: ./log/refcoco_selective_twice_refcoco/models/best_map.h5
+save_path: /data2/dxw/refcocog_yolo_test
+word_len: 20
+
+transformer_encoder_num: 2
+transformer_decoder_num: 2
+
+batch_size: 32
+workers: 32
+
+num_query: 16
+query_balance: True
+

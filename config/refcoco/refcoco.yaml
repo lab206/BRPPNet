@@ -1,0 +1,14 @@
+train_set: ./data/data_v2/anns/refcoco/train.json
+evaluate_set: ./data/data_v2/anns/refcoco/val.json
+seg_gt_path: ./data/data_v2/masks/refcoco
+log_path: ./log/refcoco_selective_twice
+evaluate_model: ./log/refcoco_selective_twice_refcoco/models/best_map.h5
+evaluate_name: selective_ST_val
+save_path: /data2/dxw/refcoco_pole_testA
+
+batch_size: 24
+workers: 32
+
+num_query: 15
+
+steps: 10

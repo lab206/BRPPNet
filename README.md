@@ -19,7 +19,7 @@
 <p align="center">We will release code and proposed RPCOCO dataset in the future. </p>
 <br>
 
-<div align=center><img src="https://s2.loli.net/2023/05/03/WzA9goL8BQkU4Ys.png" /></div>
+<div align=center><img src="assets/network.png" /></div>
 
 ### Update
 - 2023.05.03 Init repository.
@@ -53,7 +53,7 @@ boosts performance, yielding remarkable improvements on all the metrics.
  ```
 cd data
 python data_process_v2.py --data_root . --output_dir data_v2 --dataset [rpcocos/rpcocom/rpcocol] --split [unc/umd/google] --generate_mask
-```
+ ```
 ## Training and Evaluating
 
 1. Pretrained Backbones
@@ -93,7 +93,7 @@ def Balanced_binary_cross_entropy(pred, mask, batch, epsilon1=1.0, epsilon2 = -0
     bbce_loss = BBCE / batch
     
     return bbce_loss
-   ~~~
+~~~
 
 ## Acknowledgement
 Our project is developed based on [MCN](https://github.com/luogen1996/MCN), [VLT](https://github.com/henghuiding/Vision-Language-Transformer). Thanks for their excellence works.

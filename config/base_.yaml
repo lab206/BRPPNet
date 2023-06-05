@@ -1,0 +1,46 @@
+---
+#path
+train_set: ./data/data_v2/anns/rpcocos/train.json
+evaluate_set: ./data/data_v2/anns/rpcocos/testA.json
+seg_gt_path: ./data/data_v2/masks/rpcocos
+image_path: /data2/dxw/rpcoco/images
+pretrained_weights: ./data/weights/yolov3_480000.h5
+log_path: ./log/refcoco
+evaluate_model: ./log/rpcocos_example/models/best_map.h5
+evaluate_name: selective_once_val
+save_path: /data2/dxw/refcoco_pole_testA
+seed: 10010
+
+#model
+input_size: 416
+seg_out_stride: 2
+free_body: 1
+hidden_dim: 256
+
+#train
+batch_size: 24
+
+lr_scheduler: step
+lr: 0.001
+#steps: [30, 35, 40, 45, 50]
+steps: 10
+epoches: 50
+start_epoch: 0
+workers: 8
+max_queue_size: 10
+
+#lang
+word_embed: en_vectors_web_lg
+word_len: 18
+embed_dim: 300
+lang_att: True
+jemb_dim: 1024
+rnn_bidirectional: True
+rnn_hidden_size: 1024
+rnn_drop_out: 0.1
+
+#eval
+segment_thresh: 0.35
+log_images: 1
+multi_thres: false
+...
