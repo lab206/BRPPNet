@@ -57,3 +57,4 @@ experiments/
 checkpoints/
 .DS_Store
 !/data/weights/*.h5
+!/data/data_v2/anns/*/*.json
