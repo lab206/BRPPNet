@@ -15,17 +15,12 @@
 
 ####
 
-<br>
-<p align="center">We will release code and proposed RPCOCO dataset in the future. </p>
-<br>
 
 <div align=center><img src="assets/network.png" /></div>
 
 ### Update
 - 2023.05.03 Init repository.
-
-### TODO List
-- [ ] Code release. 
+- 2023.06.05 Code and dataset release. 
 
 ### Abstract
 Traditional personal image privacy protection usually suffers from the overprotection problem, where one or more undesired persons in an image may be
