@@ -90,5 +90,18 @@ def Balanced_binary_cross_entropy(pred, mask, batch, epsilon1=1.0, epsilon2 = -0
     return bbce_loss
 ~~~
 
-## Acknowledgement
+### Citation
+~~~bibtex
+@article{LIN2023120960,
+  title={{BRPPNet:} {Balanced} privacy protection network for referring personal image privacy protection},
+  author={Lin, Jiacheng and others},
+  journal={Expert Syst. Appl.},
+  pages={120960},
+  year={2023},
+  publisher={Elsevier}
+}
+~~~
+
+
+### Acknowledgement
 Our project is developed based on [MCN](https://github.com/luogen1996/MCN), [VLT](https://github.com/henghuiding/Vision-Language-Transformer). Thanks for their excellence works.
